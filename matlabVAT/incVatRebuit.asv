@@ -1,0 +1,17 @@
+function [mNewDis, mNewMst, mNewExist] = incVatRebuit(mDis, mExist, mNewPtsDis,visualise)
+    %mNewExist = mExist;
+    mNewDis = mDis;
+    oldSize = size(mDis,1);
+    %mCurrDis = mDis;
+    
+    for i = 1:size(mNewPtsDis,2)
+       mNewDis = [mNewDis mNewPtsDis(1:(oldSize+i-1),i)];
+        mNewDis = [mNewDis;[mNewPtsDis(1:(oldSize+i-1),i)' 0]];
+        
+    %    [~, ~, ~, ~, mNewMst] = Vat(mNewDis, visualise);
+    %end
+    
+    mNewExist = ones(size(mNewPtsDis,1),size(mNewPtsDis,1));
+
+    %[mRearrangedDis, vPermVerts, vMstChain, vMinWeights, mMst] = Vat(mDis, bVisualise)
+end

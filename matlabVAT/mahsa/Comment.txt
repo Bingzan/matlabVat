@@ -1,0 +1,4 @@
+Run GaussianMixture.m to generate the data for one defined distribution
+
+Run StateBasedGenerateData.m to generate a state-based data
+it generates the data as well as statevector
